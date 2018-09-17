@@ -1,11 +1,11 @@
 % Environnement NodeJS  
 % Didier Richard  
-% 2018/08/30
+% 2018/09/16
 
 ---
 
 revision:
-- 1.0.0 : 2018/08/30  
+    - 1.0.0 : 2018/09/16  
 
 ---
 
@@ -63,27 +63,26 @@ yarn versions v1.9.4
   cldr: '32.0',
   tz: '2017c' }
 Done in 0.02s.
-[12:02:32] CLI version 2.0.1
+[16:11:35] CLI version 2.0.1
 grunt-cli v1.3.0
 ```
 
 ## A shell to hide container's usage ##
 
 As a matter of fact, typing the `docker run ...` long command is painfull !  
-In the [bin directory, the nodejsmkdocs.sh bash shell](bin/nodejsmkdocs.sh)
+In the [bin directory, the nodejs.sh bash shell](bin/nodejs.sh)
 can be invoked to ease the use of such a container. For instance (we suppose
 that the shell script has been copied in a bin directory and is in the user's
 PATH) :
 
 ```bash
 $ cd whatever/bin
-$ ln -s nodejsmkdocs.sh nodejs
-$ ln -s nodejsmkdocs.sh node
-$ ln -s nodejsmkdocs.sh yarn
-$ ln -s nodejsmkdocs.sh npm
-$ ln -s nodejsmkdocs.sh gulp
-$ ln -s nodejsmkdocs.sh grunt
-$ ln -s nodejsmkdocs.sh mkdocs
+$ ln -s nodejs.sh nodejs
+$ ln -s nodejs.sh node
+$ ln -s nodejs.sh yarn
+$ ln -s nodejs.sh npm
+$ ln -s nodejs.sh gulp
+$ ln -s nodejs.sh grunt
 $ nodejs --version
 v8.11.4
 ```

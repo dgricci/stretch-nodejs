@@ -1,5 +1,5 @@
 # nodejs environment
-FROM dgricci/mkdocs:1.0.0
+FROM dgricci/stretch:1.0.0
 MAINTAINER  Didier Richard <didier.richard@ign.fr>
 LABEL       version="1.0.0" \
             node="v8.11.4" \

@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Exécute le container docker dgricci/nodejs-mkdocs
+# Exécute le container docker dgricci/nodejs
 #
 # Constantes :
 VERSION="0.0.1"
@@ -12,11 +12,10 @@ VERSION="0.0.1"
 #[npm]=""
 #[gulp]=""
 #[grunt]=""
-#[mkdocs]=""
 #)
 #
 theShell="$(basename $0 | sed -e 's/\.sh$//')"
-dockerCmd="docker run -e USER_ID=${UID} -e USER_NAME=${USER} --name=\"nodejs-mkdocs$$\""
+dockerCmd="docker run -e USER_ID=${UID} -e USER_NAME=${USER} --name=\"nodejs$$\""
 dockerSpecialOpts="--rm=true"
 dockerImg="dgricci/nodejs"
 cmdToExec="$theShell"
@@ -121,9 +120,6 @@ yarn|npm|grunt|gulp)
 esac
 
 case "${theShell}" in
-mkdocs)
-    vol="documents"
-    ;;
 *)
     vol="src"
     ;;
