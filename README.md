@@ -1,11 +1,12 @@
 % Environnement NodeJS  
 % Didier Richard  
-% 2018/09/16
+% 2018/10/09
 
 ---
 
 revision:
-    - 1.0.0 : 2018/09/16  
+    - 1.0.0 : 2018/09/16 : node.js 8.11.4, yarn 1.9.4  
+    - 1.1.0 : 2018/10/09 : node.js 8.12.0, yarn 1.10.1  
 
 ---
 
@@ -31,8 +32,8 @@ $ docker tag dgricci/nodejs:$(< VERSION) dgricci/nodejs:latest
 ```bash
 $ docker build \
     --build-arg NPM_CONFIG_LOGLEVEL=info \
-    --build-arg NODE_VERSION=8.11.4 \
-    --build-arg YARN_VERSION=1.9.4 \
+    --build-arg NODE_VERSION=8.12.0 \
+    --build-arg YARN_VERSION=1.10.1 \
     --build-arg GULPCLI_VERSION=2.0.1 \
     --build-arg GRUNTCLI_VERSION=1.3.0 \
     -t dgricci/nodejs:$(< VERSION) .
@@ -45,13 +46,13 @@ See `dgricci/stretch` README for handling permissions with dockers volumes.
 
 ```bash
 $ docker run --rm dgricci/nodejs:$(< VERSION)
-v8.11.4
-yarn versions v1.9.4
-{ yarn: '1.9.4',
+v8.12.0
+yarn versions v1.10.1
+{ yarn: '1.10.1',
   http_parser: '2.8.0',
-  node: '8.11.4',
-  v8: '6.2.414.54',
-  uv: '1.19.1',
+  node: '8.12.0',
+  v8: '6.2.414.66',
+  uv: '1.19.2',
   zlib: '1.2.11',
   ares: '1.10.1-DEV',
   modules: '57',
@@ -63,7 +64,7 @@ yarn versions v1.9.4
   cldr: '32.0',
   tz: '2017c' }
 Done in 0.02s.
-[16:11:35] CLI version 2.0.1
+[16:35:33] CLI version 2.0.1
 grunt-cli v1.3.0
 ```
 
@@ -84,7 +85,7 @@ $ ln -s nodejs.sh npm
 $ ln -s nodejs.sh gulp
 $ ln -s nodejs.sh grunt
 $ nodejs --version
-v8.11.4
+v8.12.0
 ```
 
 __Et voilà !__
