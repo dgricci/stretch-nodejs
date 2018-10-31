@@ -3,7 +3,7 @@
 # Exécute le container docker dgricci/nodejs
 #
 # Constantes :
-VERSION="0.0.1"
+VERSION="0.0.2"
 # Variables globales :
 #readonly -A commands=(
 #[nodejs]=""
@@ -14,6 +14,7 @@ VERSION="0.0.1"
 #[grunt]=""
 #)
 #
+proxyEnv=""
 theShell="$(basename $0 | sed -e 's/\.sh$//')"
 dockerCmd="docker run -e USER_ID=${UID} -e USER_NAME=${USER} --name=\"nodejs$$\""
 dockerSpecialOpts="--rm=true"
@@ -78,8 +79,8 @@ usage: `basename $0` [--help -h] | [--dry-run|-s] commandAndArguments
     commandAndArguments : arguments and/or options to be handed over to ${theShell}.
                           The directory where this script is lauched is a
                           nodejs's project stands.
-                          If command has the special options --bind-port
-                          can be used to bind host's port with the same port
+                          If command has the special option --bind-port,
+                          it can be used to bind host's port with the same port
                           on the container's side.
 EOF
     exit $1

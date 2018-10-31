@@ -1,12 +1,13 @@
 % Environnement NodeJS  
 % Didier Richard  
-% 2018/10/09
+% 2018/10/31
 
 ---
 
 revision:
     - 1.0.0 : 2018/09/16 : node.js 8.11.4, yarn 1.9.4  
     - 1.1.0 : 2018/10/09 : node.js 8.12.0, yarn 1.10.1  
+    - 1.2.0 : 2018/10/31 : node.js 10.13.0, yarn 1.12.1  
 
 ---
 
@@ -32,8 +33,8 @@ $ docker tag dgricci/nodejs:$(< VERSION) dgricci/nodejs:latest
 ```bash
 $ docker build \
     --build-arg NPM_CONFIG_LOGLEVEL=info \
-    --build-arg NODE_VERSION=8.12.0 \
-    --build-arg YARN_VERSION=1.10.1 \
+    --build-arg NODE_VERSION=10.13.0 \
+    --build-arg YARN_VERSION=1.12.1 \
     --build-arg GULPCLI_VERSION=2.0.1 \
     --build-arg GRUNTCLI_VERSION=1.3.0 \
     -t dgricci/nodejs:$(< VERSION) .
@@ -46,25 +47,40 @@ See `dgricci/stretch` README for handling permissions with dockers volumes.
 
 ```bash
 $ docker run --rm dgricci/nodejs:$(< VERSION)
-v8.12.0
-yarn versions v1.10.1
-{ yarn: '1.10.1',
-  http_parser: '2.8.0',
-  node: '8.12.0',
-  v8: '6.2.414.66',
-  uv: '1.19.2',
-  zlib: '1.2.11',
-  ares: '1.10.1-DEV',
-  modules: '57',
-  nghttp2: '1.32.0',
-  napi: '3',
-  openssl: '1.0.2p',
-  icu: '60.1',
-  unicode: '10.0',
-  cldr: '32.0',
-  tz: '2017c' }
+v10.13.0
+yarn versions v1.12.1
+{ yarn:
+   '1.12.1',
+  http_parser:
+   '2.8.0',
+  node:
+   '10.13.0',
+  v8:
+   '6.8.275.32-node.36',
+  uv:
+   '1.23.2',
+  zlib:
+   '1.2.11',
+  ares:
+   '1.14.0',
+  modules:
+   '64',
+  nghttp2:
+   '1.34.0',
+  napi:
+   '3',
+  openssl:
+   '1.1.0i',
+  icu:
+   '62.1',
+  unicode:
+   '11.0',
+  cldr:
+   '33.1',
+  tz:
+   '2018e' }
 Done in 0.02s.
-[16:35:33] CLI version 2.0.1
+[21:49:33] CLI version 2.0.1
 grunt-cli v1.3.0
 ```
 
@@ -85,7 +101,7 @@ $ ln -s nodejs.sh npm
 $ ln -s nodejs.sh gulp
 $ ln -s nodejs.sh grunt
 $ nodejs --version
-v8.12.0
+v10.13.0
 ```
 
 __Et voilà !__
