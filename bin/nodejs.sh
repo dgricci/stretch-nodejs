@@ -114,6 +114,10 @@ processArg () {
 [ ! -z "${https_proxy}" ] && {
     dockerCmd="${dockerCmd} -e https_proxy=${https_proxy}"
 }
+[ ! -z "${bind_port}" ] && {
+    dockerCmd="${dockerCmd} -e bind_port=${bind_port}"
+}
+
 case "${theShell}" in
 yarn|npm|grunt|gulp)
     dockerCmd="${dockerCmd} -it"
@@ -125,7 +129,12 @@ case "${theShell}" in
     vol="src"
     ;;
 esac
-dockerCmd="${dockerCmd} -v'${PWD}':/${vol} -w/${vol}"
+dockerCmd="${dockerCmd} --mount type=bind,source='${PWD}',target=/${vol} -w/${vol}"
+
+[ ! -z "${bind_port}" ] && {
+    processArg "--bind-port=${bind_port}"
+    processArg "--bind-port=$((${bind_port} + 1))"
+}
 
 while [ $# -gt 0 ]; do
     # protect back argument containing IFS characters ...

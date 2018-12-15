@@ -2,7 +2,7 @@
 FROM dgricci/stretch:1.0.0
 MAINTAINER  Didier Richard <didier.richard@ign.fr>
 LABEL       version="1.0.0" \
-            node="v10.13.0" \
+            node="v10.14.2" \
             yarn="v1.12.3" \
             gulpCli="v2.0.1" \
             gruntCli="v1.3.0" \
@@ -13,7 +13,7 @@ LABEL       version="1.0.0" \
 ARG NPM_CONFIG_LOGLEVEL
 ENV NPM_CONFIG_LOGLEVEL ${NPM_CONFIG_LOGLEVEL:-info}
 ARG NODE_VERSION
-ENV NODE_VERSION ${NODE_VERSION:-10.13.0}
+ENV NODE_VERSION ${NODE_VERSION:-10.14.2}
 ARG YARN_VERSION
 ENV YARN_VERSION ${YARN_VERSION:-1.12.3}
 ARG GULPCLI_VERSION
