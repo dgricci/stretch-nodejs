@@ -78,7 +78,7 @@ usage: `basename $0` [--help -h] | [--dry-run|-s] commandAndArguments
 
     commandAndArguments : arguments and/or options to be handed over to ${theShell}.
                           The directory where this script is lauched is a
-                          nodejs's project stands.
+                          nodejs' project stands.
                           If command has the special option --bind-port,
                           it can be used to bind host's port with the same port
                           on the container's side.
