@@ -2,8 +2,8 @@
 FROM dgricci/stretch:1.0.0
 MAINTAINER  Didier Richard <didier.richard@ign.fr>
 LABEL       version="1.2.3" \
-            node="v10.15.0" \
-            yarn="v1.13.0" \
+            node="v10.15.3" \
+            yarn="v1.16.0" \
             gulpCli="v2.0.1" \
             gruntCli="v1.3.0" \
             os="Debian Stretch" \
@@ -13,9 +13,9 @@ LABEL       version="1.2.3" \
 ARG NPM_CONFIG_LOGLEVEL
 ENV NPM_CONFIG_LOGLEVEL ${NPM_CONFIG_LOGLEVEL:-info}
 ARG NODE_VERSION
-ENV NODE_VERSION ${NODE_VERSION:-10.15.0}
+ENV NODE_VERSION ${NODE_VERSION:-10.15.3}
 ARG YARN_VERSION
-ENV YARN_VERSION ${YARN_VERSION:-1.13.0}
+ENV YARN_VERSION ${YARN_VERSION:-1.16.0}
 ARG GULPCLI_VERSION
 ENV GULPCLI_VERSION ${GULPCLI_VERSION:-2.0.1}
 ARG GRUNTCLI_VERSION
