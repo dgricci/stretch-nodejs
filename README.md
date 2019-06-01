@@ -1,6 +1,6 @@
 % Environnement NodeJS  
 % Didier Richard  
-% 2019/05/16
+% 2019/06/01
 
 ---
 
@@ -12,6 +12,7 @@ revision:
     - 1.2.2 : 2018/12/15 : node.js 10.14.2, yarn 1.12.3  
     - 1.2.3 : 2019/01/27 : node.js 10.15.0, yarn 1.13.0  
     - 1.2.4 : 2019/05/16 : node.js 10.15.3, yarn 1.16.0  
+    - 1.3.0 : 2019/06/01 : node.js 10.16.0, yarn 1.16.0  
 
 ---
 
@@ -37,7 +38,7 @@ $ docker tag dgricci/nodejs:$(< VERSION) dgricci/nodejs:latest
 ```bash
 $ docker build \
     --build-arg NPM_CONFIG_LOGLEVEL=info \
-    --build-arg NODE_VERSION=10.15.3 \
+    --build-arg NODE_VERSION=10.16.0 \
     --build-arg YARN_VERSION=1.16.0 \
     --build-arg GULPCLI_VERSION=2.0.1 \
     --build-arg GRUNTCLI_VERSION=1.3.0 \
@@ -51,7 +52,7 @@ See `dgricci/stretch` README for handling permissions with dockers volumes.
 
 ```bash
 $ docker run --rm dgricci/nodejs:$(< VERSION)
-v10.15.3
+v10.16.0
 yarn versions v1.16.0
 { yarn:
    '1.16.0',
@@ -105,7 +106,7 @@ $ ln -s nodejs.sh npm
 $ ln -s nodejs.sh gulp
 $ ln -s nodejs.sh grunt
 $ nodejs --version
-v10.15.3
+v10.16.0
 ```
 
 __Et voilà !__
